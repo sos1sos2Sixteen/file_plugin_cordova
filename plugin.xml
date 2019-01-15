@@ -1,7 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="file_plugin_whu_sy" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="file_plugin_whu_sy" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>file_plugin</name>
     <js-module name="file_plugin" src="www/file_plugin.js">
         <clobbers target="cordova.plugins.file_plugin" />
     </js-module>
+
+    <platform name="windows">
+        <js-module src="src/Windows/echopluginProxy.js" name="EchoProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
 </plugin>
